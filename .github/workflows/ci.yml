@@ -50,6 +50,9 @@ jobs:
 
       - name: Test
         run: ctest --test-dir build --output-on-failure
+        
+      - name: Run local smoke test
+        run: bash scripts/smoke_local.sh
 
   portable-linux:
     name: linux-Release-portable-runtime-dispatch
