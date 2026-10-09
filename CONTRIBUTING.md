@@ -62,6 +62,17 @@ For performance-related PRs, please report:
 
 Raw benchmark output is preferred over screenshots.
 
+## Local smoke test
+
+New contributors can run the local smoke test from the repository root:
+
+```bash
+bash scripts/smoke_local.sh
+```
+
+The script configures and builds a Release version, runs the existing tests, creates a tiny synthetic GGUF fixture, and exercises the streaming runtime. It does not require network access or downloading an external model. A successful run prints `Smoke test completed successfully.`
+
+
 Independent benchmark reproductions — including results that narrow or contradict existing measurements — are welcome when the full environment and raw evidence are included.
 
 ## Coding style
